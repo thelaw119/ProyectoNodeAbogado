@@ -1,16 +1,35 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+    <title>Hello, world!</title>
+  </head>
+  <body style="background-color: rgba(63, 176, 211, 0.39);">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <div style="height: 100px; background-color: rgba(247, 0, 255, 0.397);"><br>
+        <center>
+         <a class="btn btn-outline-dark active " href="index.html" role="button">Inicio</a>
+         <a class="btn btn-outline-light" href="fotos.html" role="button">Fotos</a>
+         <a class="btn btn-outline-dark " href="videos.html" role="button">Videos</a>
+         <a class="btn btn-outline-light" href="login.html" role="button">Acceso</a>    
+        </center>
+      </div>
+      <div><br><br>
+        <center>
+      <form action="cargar" method="post">
+        <h4 >Ingrese su nombre:</h4>
+        <input type="text" name="nombre" size="30"><br><br><br>
+        <h4>Escriba un Comentario:</h4>
+        <textarea name="comentarios" rows="5" cols="60"></textarea><br><br>
+        <input class="btn btn-outline-danger btn-lg" type="submit" value="Enviar">
+      </form><br><br><br>
+    </center>
+      </div>
+</body>
+
 </html>
