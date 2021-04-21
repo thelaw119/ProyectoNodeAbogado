@@ -10,7 +10,7 @@ const mime = {
    'css'  : 'text/css',
    'jpg'  : 'image/jpg',
    'ico'  : 'image/x-icon',
-   'mp3'  :	'audio/mpeg3',
+   'mp3'  : 'audio/mpeg3',
    'mp4'  : 'video/mp4'
 };
 
@@ -90,7 +90,8 @@ function GuardarDatos(pedido,respuesta) {
                 <h3>Direccion:${formulario['direccion']}<h3><br>
                 <h3>Numero Expediente:${formulario['numero_expediente']}<h3><br>
                 <h3>Estado:${formulario['estado']}<h3><br>
-                <h3>Periodo:${formulario['periodo']}<h3><br>
+                <h3>Fecha Inicio:${formulario['fecha_i']}<h3><br>
+                <h3>Fecha termino:${formulario['fecha_t']}<h3><br>
                 <a class="btn btn-outline-danger btn-lg" href="datos_clientes.html" role="button">Volver</a><br><br>
                 </div></div></center></body></html>`;  
     respuesta.end(pagina);
