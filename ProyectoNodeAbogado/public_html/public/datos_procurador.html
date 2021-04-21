@@ -1,16 +1,86 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+        <title>Hello, world!</title>
     </head>
-    <body>
-        <div>TODO write content</div>
+    <body style="background-color: rgba(63, 176, 211, 0.39);">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <div style="height: 100px; background-color: rgba(247, 0, 255, 0.397);"><br>
+            <center>
+                <a class="btn btn-outline-dark active " href="index.html" role="button">Inicio</a>
+                <a class="btn btn-outline-light" href="fotos.html" role="button">Fotos</a>
+                <a class="btn btn-outline-dark " href="videos.html" role="button">Videos</a>
+                <a class="btn btn-outline-light" href="login.html" role="button">Acceso</a>    
+            </center>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 pb-5"><br><br><br>
+                    <form action="cargarprocurador" method="post">
+                        <div class="card border-primary rounded-0">
+                            <div class="card-header p-0">
+                                <div class="bg-info text-white text-center py-2">
+                                    <h3><i class="fa fa-envelope"></i> Ingrese </h3>
+                                    <p class="m-0">Datos del procurador</p>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-user text-info">ingrese su nombre</i></div>
+                                        </div>
+                                        <input type="text" class="form-control"  placeholder="Juan" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-user text-info">ingrese sus Apellidos</i></div>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Perez Perez" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-envelope text-info">ingrese su correo</i></div>
+                                        </div>
+                                        <input type="email" class="form-control"  placeholder="ejemplo@gmail.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-comment text-info">ingrese su edad</i></div>
+                                        </div>
+                                        <input type="number" placeholder="18" min="18" max="80" required> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-comment text-info">ingrese N° Expediente</i></div>
+                                        </div>
+                                        <input type="text" class="form-control"  placeholder="0001" required >
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <input type="submit" value="Enviar" class="btn btn-info btn-block rounded-0 py-2 btn-lg">
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
