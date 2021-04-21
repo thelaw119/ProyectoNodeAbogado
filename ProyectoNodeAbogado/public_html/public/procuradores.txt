@@ -74,3 +74,10 @@ nombre:apn
                edad:18
                expediente:23
                *******************
+
+               nombre:Pepe
+               apellidos:Perez
+               correo:pepe@pepe.cl
+               edad:20
+               expediente:001
+               *******************

@@ -24,6 +24,7 @@ const servidor=http.createServer((pedido,respuesta) => {
 
 function encaminar (pedido,respuesta,camino) {
   switch (camino) {
+      //LAW
     case 'public/GuardarDatos': {
       GuardarDatos(pedido,respuesta);
       break;
@@ -32,10 +33,9 @@ function encaminar (pedido,respuesta,camino) {
       grabarDatosProc(pedido,respuesta);
       break;
     }
-    case 'public/leercomentarios': {
-      leerComentarios(respuesta);
-      break;
-    }			
+    //SE DEBE AGREGAR OTRO CASE PARA VISUALIZAR
+                
+                
     default : {  
       fs.stat(camino, error => {
         if (!error) {
@@ -62,7 +62,8 @@ function encaminar (pedido,respuesta,camino) {
     }
   }	
 }
-
+ 
+//Funcion creado por Law 
 function GuardarDatos(pedido,respuesta) {
   let info = '';
   pedido.on('data', datosparciales => {
@@ -71,21 +72,33 @@ function GuardarDatos(pedido,respuesta) {
   pedido.on('end', function(){
     const formulario = querystring.parse(info);
     respuesta.writeHead(200, {'Content-Type': 'text/html'});
-    const pagina=`<!doctype html><html><head></head><body>
-                DNI:${formulario['dni']}<br>
-                Nombre:${formulario['nombre']}<br>
-                Apellido:${formulario['apellido']}<br>
-                Direccion:${formulario['direccion']}<br>
-                Numero Expediente:${formulario['numero_expediente']}<br>
-                Estado:${formulario['estado']}<br>
-                Periodo:${formulario['periodo']}<br>
-                <a href="index.html">Retornar</a>
-                </body></html>`;
+
+    const pagina=`<!doctype html><html><head>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+                </head><body style="background-color: rgba(63, 176, 211, 0.39);"><center>
+                <div style="height: 100px; background-color: rgba(247, 0, 255, 0.397);"><br>
+                <a class="btn btn-outline-dark " href="index.html" role="button">Inicio</a>
+                <a class="btn btn-outline-light" href="datos_clientes.html" role="button">Ingreso Clientes</a>
+                <a class="btn btn-outline-dark active" href="datos_procurador.html" role="button">Ingreso Procurador</a>
+                <a class="btn btn-outline-light " href="historial_cliente.html" role="button">Historial Clientes</a>
+                <a class="btn btn-outline-dark" href="historial_procurador.html" role="button">Historial Procurador</a>    
+                </div><br><br><br><br><div class="col-md-4 input-group-text border border-info">
+                <div class="text-center col-lg-12"><br><br>
+                <h3>DNI:${formulario['dni']}<h3><br>
+                <h3>Nombre:${formulario['nombre']}<h3><br>
+                <h3>Apellido:${formulario['apellido']}<h3><br>
+                <h3>Direccion:${formulario['direccion']}<h3><br>
+                <h3>Numero Expediente:${formulario['numero_expediente']}<h3><br>
+                <h3>Estado:${formulario['estado']}<h3><br>
+                <h3>Periodo:${formulario['periodo']}<h3><br>
+                <a class="btn btn-outline-danger btn-lg" href="datos_clientes.html" role="button">Volver</a><br><br>
+                </div></div></center></body></html>`;  
     respuesta.end(pagina);
     GuardarFinalizador(formulario); 
   });	
 }
 
+//Funcion creada por LAW
 function GuardarFinalizador(formulario) {
   const datos=` DNI:${formulario['dni']}<br>
                 Nombre:${formulario['nombre']}<br>
