@@ -4,27 +4,68 @@
         <title>Ingreso Cliente</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script type="text/javascript">
+            function Mostrar(){
+                document.getElementById("asunto").style.display = "block";
+            }
+            function Ocultar(){
+                document.getElementById("asunto").style.display = "none";
+            }
+            function Mostrar_Ocultar(){
+                var contenido = document.getElementById("asunto");
+                
+                if(contenido.style.display == "block"){
+                    Ocultar();
+                    document.getElementById("boton").value = "Mostrar Asunto";
+                }else{
+                    Mostrar();
+                    document.getElementById("boton").value = "Ocultar Asunto";
+                }
+            }
+        </script>
     </head>
     <body>
         <div>
-            
-            <form action="" method="">
+
+            <form action="GuardarDatos" method="post" name="fclientes">
                 <label>DNI</label>
-                <input type="text" name="" value="">
+                <input type="text" name="dni" value="">
                 <br>
                 <label>Nombre</label>
-                <input type="text" name="" vale="">
+                <input type="text" name="nombre" vale="">
                 <br>
                 <label>Apellido</label>
-                <input type="text" name="" vale="">
+                <input type="text" name="apellido" vale="">
                 <br>
-                <label>Apellido</label>
-                <input type="text" name="" vale="">
+                <label>Direccion</label>
+                <input type="text" name="direccion" vale="">
                 <br>
+                
+                
+                <section id="asunto" hidden="none">
+                    
+                    <input type="number" name="numero_expediente" value="">
+                    <br>
+                    <select name="estado">
+                        <option>Seleccionar Estado</option>
+                        <option value="Tramite">Tramite</option>
+                        <option value="Archivado">Archivado</option>
+                    </select>
+                    <br>
+                    <input type="date" name="periodo" value="">
+                </section>
+                
+                <br>
+                
+                <input type="submit" value="Guardar">
                 
             </form>
             
-            
+            <input type="submit" id="boton" value="Agregar Sunto" onclick="Mostrar_Ocultar()"/>
+                
+                
+
         </div>
     </body>
 </html>
