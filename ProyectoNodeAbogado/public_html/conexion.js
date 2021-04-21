@@ -32,7 +32,9 @@ function encaminar (pedido,respuesta,camino) {
     case 'public/grabarDatosProc': {
       grabarDatosProc(pedido,respuesta);
       break;
-    }
+    }case 'public/leerprocurador': {
+      leerprocurador(respuesta);
+      break;}
     //SE DEBE AGREGAR OTRO CASE PARA VISUALIZAR
                 
                 
@@ -157,6 +159,15 @@ function grabarEnArchivo(formulario) {
   fs.appendFile('public/procuradores.txt',datos, error => {
     if (error)
       console.log(error);
+  });
+}
+function leerprocurador(respuesta) {
+  fs.readFile('public/procuradores.txt', (error,datos) => {
+    respuesta.writeHead(200, {'Content-Type': 'text/html'});
+    respuesta.write('<!doctype html><html><head></head><body>');
+    respuesta.write(datos);
+    respuesta.write('</body></html>');
+    respuesta.end();	      
   });
 }
 //*****seiko*****
