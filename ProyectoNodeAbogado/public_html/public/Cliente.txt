@@ -1,37 +1,22 @@
- DNI:hhhhhhh<br>
-                Nombre:hhhh<br>
-                Apellido:hhhhhhhh<br>
-                Direccion:hhhhhh,hhhh<br>
-                Numero Expediente:undefined<br>
+ DNI:12.123.231-8<br>
+                Nombre:juan<br>
+                Apellido:perez<br>
+                Direccion:rosas 231<br>
+                Numero Expediente:13<br>
                 Estado:Tramite<br>
-                Periodo:2021-04-21<hr> DNI:5<br>
-                Nombre:5<br>
-                Apellido:5<br>
-                Direccion:5,5<br>
-                Numero Expediente:undefined<br>
+                Periodo:undefined<hr> 
+                ******************* DNI:23<br>
+                Nombre:carlos<br>
+                Apellido:garrido<br>
+                Direccion:rosas 444<br>
+                Numero Expediente:43<br>
+                Estado:Archivado<br>
+                Periodo:undefined<hr> 
+                ******************* DNI:12.123.231-8<br>
+                Nombre:were<br>
+                Apellido:eree<br>
+                Direccion:erer<br>
+                Numero Expediente:234<br>
                 Estado:Tramite<br>
-                Periodo:2021-04-21<hr> DNI:12.345.678-9<br>
-                Nombre:Juan Carlos<br>
-                Apellido:Perez<br>
-                Direccion:calle siempre nueva #111<br>
-                Numero Expediente:001<br>
-                Estado:Archivado<br>
-                Periodo:undefined<hr> DNI:12.345.678-9<br>
-                Nombre:Juan Carlos<br>
-                Apellido:Perez<br>
-                Direccion:calle siempre nueva #111<br>
-                Numero Expediente:001<br>
-                Estado:Archivado<br>
-                Periodo:undefined<hr> DNI:12.345.678-9<br>
-                Nombre:Juan Carlos<br>
-                Apellido:Perez<br>
-                Direccion:calle siempre nueva #111<br>
-                Numero Expediente:001<br>
-                Estado:Archivado<br>
-                Periodo:undefined<hr> DNI:l<br>
-                Nombre:l<br>
-                Apellido:l<br>
-                Direccion:l<br>
-                Numero Expediente:0002<br>
-                Estado:Archivado<br>
-                Periodo:undefined<hr>
+                Periodo:undefined<hr> 
+                *******************

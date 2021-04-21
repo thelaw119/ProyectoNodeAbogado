@@ -1,7 +1,14 @@
 
-               nombre:wqe<br>
-               apellidos:qwe<br>
-               correo:qwe@asd.cl<br>
-               edad:23<br>
+               nombre:rfe<br>
+               apellidos:r<br>
+               correo:asd@aasd<br>
+               edad:32<br>
                expediente:123<br>
+               *******************
+
+               nombre:2<br>
+               apellidos:d<br>
+               correo:34rwrqsdf@dd<br>
+               edad:23<br>
+               expediente:23<br>
                *******************
