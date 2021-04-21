@@ -1,7 +1,0 @@
- DNI:123<br>
-                Nombre:asd<br>
-                Apellido:asd<br>
-                Direccion:asd<br>
-                Numero Expediente:123<br>
-                Estado:Tramite<br>
-                Periodo:2021-04-20<hr>
