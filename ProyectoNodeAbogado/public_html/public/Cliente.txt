@@ -28,4 +28,10 @@
                 Direccion:calle siempre nueva #111<br>
                 Numero Expediente:001<br>
                 Estado:Archivado<br>
+                Periodo:undefined<hr> DNI:l<br>
+                Nombre:l<br>
+                Apellido:l<br>
+                Direccion:l<br>
+                Numero Expediente:0002<br>
+                Estado:Archivado<br>
                 Periodo:undefined<hr>

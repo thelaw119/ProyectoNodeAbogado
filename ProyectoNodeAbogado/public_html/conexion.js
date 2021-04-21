@@ -117,7 +117,8 @@ function GuardarFinalizador(formulario) {
                 Direccion:${formulario['direccion']}<br>
                 Numero Expediente:${formulario['numero_expediente']}<br>
                 Estado:${formulario['estado']}<br>
-                Periodo:${formulario['periodo']}<hr>`;
+                Periodo:${formulario['periodo']}<hr> 
+                *******************`;
     fs.appendFile('public/Cliente.txt', datos, error => {
         if (error)
             console.log(error);
@@ -157,11 +158,11 @@ function grabarDatosProc(pedido, respuesta) {
 
 function grabarEnArchivo(formulario) {
     const datos = `
-               nombre:${formulario['nombre']}
-               apellidos:${formulario['apellidos']}
-               correo:${formulario['correo']}
-               edad:${formulario['edad']}
-               expediente:${formulario['exped']}
+               nombre:${formulario['nombre']}<br>
+               apellidos:${formulario['apellidos']}<br>
+               correo:${formulario['correo']}<br>
+               edad:${formulario['edad']}<br>
+               expediente:${formulario['exped']}<br>
                *******************
 `;
     fs.appendFile('public/procuradores.txt', datos, error => {
@@ -170,13 +171,31 @@ function grabarEnArchivo(formulario) {
     });
 }
 function leerprocurador(respuesta) {
-    fs.readFile('public/procuradores.txt', (error, datos) => {
-        respuesta.writeHead(200, {'Content-Type': 'text/html'});
-        respuesta.write('<!doctype html><html><head></head><body>');
-        respuesta.write(datos);
-        respuesta.write('</body></html>');
-        respuesta.end();
-    });
+    
+    let  datos = fs.readFileSync('public/procuradores.txt').toString().split("\n");
+    respuesta.writeHead(200, {'Content-Type': 'text/html'});
+
+    respuesta.write(`<!doctype html><html><head>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+                </head><body style="background-color: rgba(63, 176, 211, 0.39);"><center>
+                <div style="height: 100px; background-color: rgba(247, 0, 255, 0.397);"><br>
+                <a class="btn btn-outline-dark " href="index.html" role="button">Inicio</a>
+                <a class="btn btn-outline-light" href="datos_clientes.html" role="button">Ingreso Clientes</a>
+                <a class="btn btn-outline-dark " href="datos_procurador.html" role="button">Ingreso Procurador</a>
+                <a class="btn btn-outline-light  " href="leerClientes" role="button">Historial Clientes</a>
+                <a class="btn btn-outline-dark active" href="leerprocurador" role="button">Historial Procurador</a>    
+                </div><br><br><br><br><div class="col-md-4 input-group-text border border-info">`)
+    
+    respuesta.write('<div>');
+    for (let i = 0; i < datos.length; i++) {
+      
+        respuesta.write(datos[i]);
+        
+
+    }
+    respuesta.write('</div>');
+
+    respuesta.end();
 }
 //*****seiko*****
 //****joaking****
@@ -190,9 +209,9 @@ function leerClientes(respuesta) {
                 <div style="height: 100px; background-color: rgba(247, 0, 255, 0.397);"><br>
                 <a class="btn btn-outline-dark " href="index.html" role="button">Inicio</a>
                 <a class="btn btn-outline-light" href="datos_clientes.html" role="button">Ingreso Clientes</a>
-                <a class="btn btn-outline-dark active" href="datos_procurador.html" role="button">Ingreso Procurador</a>
-                <a class="btn btn-outline-light " href="historial_cliente.html" role="button">Historial Clientes</a>
-                <a class="btn btn-outline-dark" href="historial_procurador.html" role="button">Historial Procurador</a>    
+                <a class="btn btn-outline-dark" href="datos_procurador.html" role="button">Ingreso Procurador</a>
+                <a class="btn btn-outline-light active " href="leerClientes" role="button">Historial Clientes</a>
+                <a class="btn btn-outline-dark " href="leerprocurador" role="button">Historial Procurador</a>    
                 </div><br><br><br><br><div class="col-md-4 input-group-text border border-info">`)
     
     respuesta.write('<div>');
